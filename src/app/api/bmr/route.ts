@@ -9,6 +9,11 @@ type Profile = {
   goal?: string;
 };
 
+// Quick GET test so we can verify the route is live in a browser
+export async function GET() {
+  return NextResponse.json({ ok: 'route exists' }, { status: 200 });
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
